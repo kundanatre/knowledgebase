@@ -176,7 +176,7 @@ This can be done using a [Mean][] or a [Standard Deviation][] for the correspond
 ## Summary  
 Data pre-processing is required for the input data set to **clean the missing data, standardize and normalize** it, before it can be spilt into a **Training** and **Test** sets for the model.  
 The entire python code is here for a quick reference  
-> Code
+> [Code][]
 ```
 import pandas as pd
 
@@ -252,3 +252,4 @@ This has resulted the data to be processed **from**
 [Pandas]:https://pandas.pydata.org/
 [Mean]:https://en.wikipedia.org/wiki/Mean
 [Standard Deviation]:https://en.wikipedia.org/wiki/Standard_deviation
+[Code]:../code/preprocessor.py
