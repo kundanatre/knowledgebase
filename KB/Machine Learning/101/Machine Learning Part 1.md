@@ -119,7 +119,7 @@ This can be done using a [Mean][] or a [Standard Deviation][] for the correspond
 + **Data Normalization**  
   Again an optional but important step in data preprocessing where we try to normalize the range of data into a finite space such as between `-1` to `+1`, or may be in percentages. The idea here is to have a consistent standard deviation between the feature sets.  
 
-  Another interesting processing that is done on the feature for `Country`, the data is encoded into a unique binary form. Thus `Spain` becomes `001`, `Germany` becomes `010`, and `France` becomes `100`. This is to avoid any confusions leading to wrong assumptions like `Spain` < `Germany` < `France`, which will only make sense in the use cases where there is a temperature or grades  
+  Another interesting processing that is done on the feature for `Country`, the data is encoded into a unique binary form. Thus `Spain` becomes `001`, `Germany` becomes `010`, and `France` becomes `100` called as **OneHotEncoding**. This is to avoid any confusions leading to wrong assumptions like `Spain` < `Germany` < `France`, and would only make sense in the use cases where there is feature like temperature or grades or some related comparison between the values of the feature.  
   
   We use the same library here for the data processing. 
     > Code  
