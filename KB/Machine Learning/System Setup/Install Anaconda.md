@@ -82,13 +82,13 @@ At this point, you’ll be prompted to choose the location of the installation. 
 
 ```
 OutputAnaconda3 will now be installed into this location:
-/home/pmadhbha/anaconda3
+/home/jarvis/anaconda3
 
   - Press ENTER to confirm the location
   - Press CTRL-C to abort the installation
   - Or specify a different location below
 
-[/home/pmadhbha/anaconda3] >>> 
+[/home/jarvis/anaconda3] >>> 
 
 ```
 
@@ -100,7 +100,7 @@ Once it’s complete you’ll receive the following output:
 Output...
 installation finished.
 Do you wish the installer to prepend the Anaconda3 install location
-to PATH in your /home/pmadhbha/.bashrc ? [yes|no]
+to PATH in your /home/jarvis/.bashrc ? [yes|no]
 [no] >>> 
 
 ```
@@ -108,8 +108,8 @@ to PATH in your /home/pmadhbha/.bashrc ? [yes|no]
 Type `yes` so that you can use the `conda` command. You’ll next see the following output:
 
 ```
-OutputPrepending PATH=/home/pmadhbha/anaconda3/bin to PATH in /home/pmadhbha/.bashrc
-A backup will be made to: /home/pmadhbha/.bashrc-anaconda3.bak
+OutputPrepending PATH=/home/jarvis/anaconda3/bin to PATH in /home/jarvis/.bashrc
+A backup will be made to: /home/jarvis/.bashrc-anaconda3.bak
 ...
 
 ```
@@ -131,7 +131,7 @@ $ conda list
 You’ll receive output of all the packages you have available through the Anaconda installation:
 
 ```
-Output# packages in environment at /home/pmadhbha/anaconda3:
+Output# packages in environment at /home/jarvis/anaconda3:
 #
 _ipyw_jlab_nb_ext_conf    0.1.0            py36he11e457_0  
 alabaster                 0.7.10           py36h306e16b_0  
@@ -175,13 +175,13 @@ $ source activate ML
 
 With your environment activated, your command prompt prefix will change:
 ```
-(ML) pmadhbha@PMADHBHA-H11CK:~$ 
+(ML) jarvis@BRAIN:~$ 
 ```
 
 Within the environment, you can verify that you’re using the version of Python that you had intended to use:
 
 ```
-(ML) pmadhbha@PMADHBHA-H11CK:~$  python --version
+(ML) jarvis@BRAIN:~$  python --version
 
 ```
 
@@ -193,7 +193,7 @@ OutputPython 3.6.0 :: Continuum Analytics, Inc.
 When you’re ready to deactivate your Anaconda environment, you can do so by typing:
 
 ```
-(ML) pmadhbha@PMADHBHA-H11CK:~$ source deactivate
+(ML) jarvis@BRAIN:~$ source deactivate
 
 ```
 
@@ -225,9 +225,9 @@ $ conda info --envs
 ```
 Output# conda environments:
 #
-ML                   /home/pmadhbha/anaconda3/envs/ML
-ML35                 /home/pmadhbha/anaconda3/envs/ML35
-root                  *  /home/pmadhbha/anaconda3
+ML                   /home/jarvis/anaconda3/envs/ML
+ML35                 /home/jarvis/anaconda3/envs/ML35
+root                  *  /home/jarvis/anaconda3
 
 
 ```
@@ -315,7 +315,7 @@ $ anaconda-clean
 This will also create a backup folder called `.anaconda_backup` in your home directory:
 
 ```
-OutputBackup directory: /home/pmadhbha/.anaconda_backup/2017-01-25T191831
+OutputBackup directory: /home/jarvis/.anaconda_backup/2017-01-25T191831
 
 ```
 
@@ -335,11 +335,11 @@ $ nano ~/.bashrc
 
 Then scroll down to the end of the file (if this is a recent install) or type `CTRL + W` to search for Anaconda. Delete or comment out the following lines:
 
-/home/pmadhbha/.bashrc
+/home/jarvis/.bashrc
 
 ```
 # added by Anaconda3 4.2.0 installer
-export PATH="/home/pmadhbha/anaconda3/bin:$PATH"
+export PATH="/home/jarvis/anaconda3/bin:$PATH"
 
 ```
 
