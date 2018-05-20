@@ -7,7 +7,7 @@ Install the Python and Anaconda environment as described in the [Development Env
 Training a Model needs Data, Data needs to be valid, Validation requires preprocessing.
 Assuming we have a `CSV` file which has data in the below format; such that `Country`, `Age`, & `Salary` become the input **features** and `Purchaced` becomes the **result** which needs to be **Predicted** by our model:
 <table>
-   <tr><th> Country</td><td>Age</td><td>Salary</td><td>Purchased</th></tr>
+   <tr><th> Country</th><th>Age</th><th>Salary</th><th>Purchased</th></tr>
    <tr><td> France</td><td>44</td><td>72000</td><td>No</td></tr>
    <tr><td> Spain</td><td>27</td><td>48000</td><td>Yes</td></tr>
    <tr><td> Germany</td><td>30</td><td>54000</td><td>No</td></tr>
