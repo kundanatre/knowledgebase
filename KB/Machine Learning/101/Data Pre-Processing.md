@@ -117,9 +117,7 @@ This can be done using a [Mean][] or a [Standard Deviation][] for the correspond
     ```
 
 + **Data Normalization**  
-  Again an optional but important step in data preprocessing where we try to normalize the range of data into a finite space such as between `-1` to `+1`, or may be in percentages. The idea here is to have a consistent standard deviation between the feature sets.  
-
-  Another interesting processing that is done on the feature for `Country`, the data is encoded into a unique binary form. Thus `Spain` becomes `001`, `Germany` becomes `010`, and `France` becomes `100` called as **OneHotEncoding**. This is to avoid any confusions leading to wrong assumptions like `Spain` < `Germany` < `France`, and would only make sense in the use cases where there is feature like temperature or grades or some related comparison between the values of the feature.  
+    Optional interesting processing that is done on the feature for `Country`, the data is encoded into a unique binary form. Thus `Spain` becomes `001`, `Germany` becomes `010`, and `France` becomes `100` called as **OneHotEncoding**. This is to avoid any confusions leading to wrong assumptions like `Spain` < `Germany` < `France`, and would only make sense in the use cases where there is feature like temperature or grades or some related comparison between the values of the feature.  
   
   We use the same library here for the data processing. 
     > Code  
@@ -172,6 +170,36 @@ This can be done using a [Mean][] or a [Standard Deviation][] for the correspond
     >>> print (results_test)
     [0 0]
     ```  
++ **Feature Scaling**  
+  Again an optional but important step in data preprocessing where we try to normalize the range of data into a finite space such as between `-1` to `+1`, or may be in percentages. The idea here is to have a `Euclidean distance` on the same scale between the feature sets.
+
+  ![euclideanDistanceImage][]  
+
+  This helps the algorithms and models to converge much faster then using the regular values.  
+  This is achieved using the same library. Note That the output or the results do not need to be scaled as they are already between the finite range of 1 or 0  
+  > Code  
+  ```
+  from sklearn.preprocessing import StandardScaler
+  standardScaler_features = StandardScaler()
+  features_train = standardScaler_features.fit_transform(features_train)
+  features_test = standardScaler_features.transform(features_test)
+  ```
+  > Output
+  ```
+  >>> print(features_train)
+  [[-1.          2.64575131 -0.77459667  0.26306757  0.12381479]
+  [ 1.         -0.37796447 -0.77459667 -0.25350148  0.46175632]
+  [-1.         -0.37796447  1.29099445 -1.97539832 -1.53093341]
+  [-1.         -0.37796447  1.29099445  0.05261351 -1.11141978]
+  [ 1.         -0.37796447 -0.77459667  1.64058505  1.7202972 ]
+  [-1.         -0.37796447  1.29099445 -0.0813118  -0.16751412]
+  [ 1.         -0.37796447 -0.77459667  0.95182631  0.98614835]
+  [ 1.         -0.37796447 -0.77459667 -0.59788085 -0.48214934]]
+
+  >>> print(features_test)
+  [[-1.          2.64575131 -0.77459667 -1.45882927 -0.90166297]
+  [-1.          2.64575131 -0.77459667  1.98496442  2.13981082]]
+  ```  
 
 ## Summary  
 Data pre-processing is required for the input data set to **clean the missing data, standardize and normalize** it, before it can be spilt into a **Training** and **Test** sets for the model.  
@@ -181,38 +209,40 @@ The entire python code is here for a quick reference
 import pandas as pd
 
 # Importing the dataset
-dataset = pd.read_csv('dataset/Data.csv')
+dataset = pd.read_csv('../datasets/Data.csv')
 features = dataset.iloc[:, :-1].values
 result = dataset.iloc[:, 3].values
 
-
-# OPTIONAL
 # Handling missing data
 from sklearn.preprocessing import Imputer
 imputer = Imputer(missing_values='NaN', strategy='mean', axis=0)
 features[:, 1:3] = imputer.fit_transform(features[:, 1:3])
 
-
-# OPTIONAL
 # Feature Encoding
 from sklearn.preprocessing import LabelEncoder
 labelencoder_features = LabelEncoder()
 features[:, 0] = labelencoder_features.fit_transform(features[:, 0])
-
 # Result Encoding
 labelencoder_results = LabelEncoder()
 result = labelencoder_results.fit_transform(result)
 
-# OPTIONAL
 # Normalizing the features
 from sklearn.preprocessing import OneHotEncoder
 onehotencoder = OneHotEncoder(categorical_features = [0])
 features = onehotencoder.fit_transform(features).toarray()
 
-
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
 features_train, features_test, results_train, results_test = train_test_split(features, result, test_size = 0.2, random_state = 0)
+
+# Feature Scaling
+from sklearn.preprocessing import StandardScaler
+standardScaler_features = StandardScaler()
+features_train = standardScaler_features.fit_transform(features_train)
+features_test = standardScaler_features.transform(features_test)
+# Not required as there is only one column of data in the form of 1 and 0
+# standardScaler_results = StandardScaler()
+# results_train = standardScaler_results.fit_transform(results_train)
 
 ```
 
@@ -253,3 +283,4 @@ This has resulted the data to be processed **from**
 [Mean]:https://en.wikipedia.org/wiki/Mean
 [Standard Deviation]:https://en.wikipedia.org/wiki/Standard_deviation
 [Code]:../code/preprocessor.py
+[euclideanDistanceImage]:../images/euclidean%20Distance.png

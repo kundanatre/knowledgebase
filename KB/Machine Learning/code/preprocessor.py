@@ -1,8 +1,7 @@
-import numpy as np
 import pandas as pd
 
 # Importing the dataset
-dataset = pd.read_csv('dataset/Data.csv')
+dataset = pd.read_csv('../datasets/Data.csv')
 features = dataset.iloc[:, :-1].values
 result = dataset.iloc[:, 3].values
 
@@ -28,4 +27,11 @@ features = onehotencoder.fit_transform(features).toarray()
 from sklearn.model_selection import train_test_split
 features_train, features_test, results_train, results_test = train_test_split(features, result, test_size = 0.2, random_state = 0)
 
-print(features_train, features_test, results_train, results_test)
+# Feature Scaling
+from sklearn.preprocessing import StandardScaler
+standardScaler_features = StandardScaler()
+features_train = standardScaler_features.fit_transform(features_train)
+features_test = standardScaler_features.transform(features_test)
+# Not required as there is only one column of data in the form of 1 and 0
+# standardScaler_results = StandardScaler()
+# results_train = standardScaler_results.fit_transform(results_train)
