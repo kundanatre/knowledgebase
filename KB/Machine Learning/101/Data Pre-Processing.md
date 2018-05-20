@@ -20,6 +20,7 @@ Assuming we have a `CSV` file which has data in the below format; such that `Cou
    <tr><td> France</td><td>37</td><td>67000</td><td>Yes</td></tr>
 </table>
 
+## Steps
 The preprocessing steps would be:
 + Load the data so that it can be processed. This is achieved using the library `pandas`
     > Code

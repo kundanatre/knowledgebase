@@ -21,7 +21,17 @@ Now install the required libraries most frequently required for Machine learning
 Besides its obvious scientific uses, NumPy can also be used as an efficient multi-dimensional container of generic data. Arbitrary data-types can be defined. This allows NumPy to seamlessly and speedily integrate with a wide variety of databases.  
 
 ### Matplotlib  
-[Matplotlib][] is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
+[Matplotlib][] is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.  
+Incase if you are using Windows provided bash or running into an error as below  
+```
+ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+```
+You may want to install the below package (~300MB in size):
+```
+sudo apt-get install qtbase5-dev
+echo "export DISPLAY=:0.0" >> ~/.bashrc
+```
+Then install and run [Xming][] on windows
 
 ### Pandas  
 [Pandas][] library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.  
@@ -32,6 +42,7 @@ Besides its obvious scientific uses, NumPy can also be used as an efficient mult
 + Accessible to everybody, and reusable in various contexts
 + Built on NumPy, SciPy, and matplotlib
 
+All these libraries can be installed using the below command
 ```
 (ML365) jarvis@BRAIN:~$ conda install numpy matplotlib pandas
 ```
@@ -39,5 +50,6 @@ Besides its obvious scientific uses, NumPy can also be used as an efficient mult
 [numpy]:http://www.numpy.org/
 [Matplotlib]:https://matplotlib.org/
 [Pandas]:https://pandas.pydata.org/
+[Xming]:https://sourceforge.net/projects/xming/?source=typ_redirect
 [Scikit-Learn]:http://scikit-learn.org/stable/
 [Install Anaconda]:Install%20Anaconda.md
