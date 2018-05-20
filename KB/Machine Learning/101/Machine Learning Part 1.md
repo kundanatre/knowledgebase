@@ -216,6 +216,38 @@ features_train, features_test, results_train, results_test = train_test_split(fe
 
 ```
 
+This has resulted the data to be processed **from**  
+<table>
+   <tr><th> Country</th><th>Age</th><th>Salary</th><th>Purchased</th></tr>
+   <tr><td> France</td><td>44</td><td>72000</td><td>No</td></tr>
+   <tr><td> Spain</td><td>27</td><td>48000</td><td>Yes</td></tr>
+   <tr><td> Germany</td><td>30</td><td>54000</td><td>No</td></tr>
+   <tr><td> Spain</td><td>38</td><td>61000</td><td>No</td></tr>
+   <tr><td> Germany</td><td>40</td><td></td><td>Yes</td></tr>
+   <tr><td> France</td><td>35</td><td>58000</td><td>Yes</td></tr>
+   <tr><td> Spain</td><td></td><td>52000</td><td>No</td></tr>
+   <tr><td> France</td><td>48</td><td>79000</td><td>Yes</td></tr>
+   <tr><td> Germany</td><td>50</td><td>83000</td><td>No</td></tr>
+   <tr><td> France</td><td>37</td><td>67000</td><td>Yes</td></tr>
+</table>  
+  
+
+**to**  
+
+<table>
+    <tr><th> Country</th><th>Age</th><th>Salary</th><th>Purchased</th></tr>
+    <tr><td>0.00000000e+00 1.00000000e+00 0.00000000e+00</td><td>4.00000000e+01</td><td>6.37777778e+04</td><td>1</td></tr>
+    <tr><td>1.00000000e+00 0.00000000e+00 0.00000000e+00</td><td>3.70000000e+01</td><td>6.70000000e+04</td><td>1</td></tr>
+    <tr><td>0.00000000e+00 0.00000000e+00 1.00000000e+00</td><td>2.70000000e+01</td><td>4.80000000e+04</td><td>1</td></tr>
+    <tr><td>0.00000000e+00 0.00000000e+00 1.00000000e+00</td><td>3.87777778e+01</td><td>5.20000000e+04</td><td>0</td></tr>
+    <tr><td>1.00000000e+00 0.00000000e+00 0.00000000e+00</td><td>4.80000000e+01</td><td>7.90000000e+04</td><td>1</td></tr>
+    <tr><td>0.00000000e+00 0.00000000e+00 1.00000000e+00</td><td>3.80000000e+01</td><td>6.10000000e+04</td><td>0</td></tr>
+    <tr><td>1.00000000e+00 0.00000000e+00 0.00000000e+00</td><td>4.40000000e+01</td><td>7.20000000e+04</td><td>0</td></tr>
+    <tr><td>1.00000000e+00 0.00000000e+00 0.00000000e+00</td><td>3.50000000e+01</td><td>5.80000000e+04</td><td>1</td></tr>
+    <tr><td>0.00000000e+00 1.00000000e+00 0.00000000e+00</td><td>3.0e+01</td><td>5.4e+04</td><td>0</td></tr>
+    <tr><td>0.00000000e+00 1.00000000e+00 0.00000000e+00</td><td>5.0e+01</td><td>8.3e+04</td><td>0</td></tr>
+</table>
+
 [Development Environment Setup]: ../System%20Setup/Development%20Environment.md
 [Pandas]:https://pandas.pydata.org/
 [Mean]:https://en.wikipedia.org/wiki/Mean
