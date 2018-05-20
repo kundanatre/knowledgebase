@@ -33,11 +33,11 @@ Besides its obvious scientific uses, NumPy can also be used as an efficient mult
 + Built on NumPy, SciPy, and matplotlib
 
 ```
-(ML365) jarvis@jarvis-H11CK:~$ conda install numpy matplotlib pandas
+(ML365) jarvis@BRAIN:~$ conda install numpy matplotlib pandas
 ```
 
 [numpy]:http://www.numpy.org/
 [Matplotlib]:https://matplotlib.org/
 [Pandas]:https://pandas.pydata.org/
 [Scikit-Learn]:http://scikit-learn.org/stable/
-[Install Anaconda]: ../System Setup/Install Anaconda.md
+[Install Anaconda]:Install%20Anaconda.md

@@ -1,7 +1,7 @@
 # Machine Learning 101 : Data Pre-Processing
 
 ## Prerequisites
-Install the Python and Anaconda environment as described in the [Environment Setup][] Page.
+Install the Python and Anaconda environment as described in the [Development Environment Setup][] Page.
 
 ## Data Preparation - Data Preprocessing
 Training a Model needs Data, Data needs to be valid, Validation requires preprocessing.
