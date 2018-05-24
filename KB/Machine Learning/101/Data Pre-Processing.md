@@ -284,4 +284,4 @@ This has resulted the data to be processed **from**
 [Mean]:https://en.wikipedia.org/wiki/Mean
 [Standard Deviation]:https://en.wikipedia.org/wiki/Standard_deviation
 [Code]:../code/preprocessor.py
-[euclideanDistanceImage]:../images/euclidean%20Distance.png
+[euclideanDistanceImage]:../../images/euclidean%20Distance.png

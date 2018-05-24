@@ -388,5 +388,5 @@ cluster is healthy
 
 At this point we are done with the basic setup for Kubernetes Cluster  
 
-[Kubernetes for Production Setup]:#
+[Kubernetes for Production Setup]:Kubernetes%20for%20Production.md
 [Master Node Setup]:##%20Master%20Node%20Setup 

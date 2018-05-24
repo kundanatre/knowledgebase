@@ -21,6 +21,7 @@ It is based on below assumptions
 + Lack of multicollinearity
     
     It can be used any where the `feature` set increases or decreases with the `result` set, with some kind of slope.
+    ![WIP][]
 
 ## Steps
 The preprocessing steps would be:
@@ -152,6 +153,7 @@ plt.show()
 ```
 
 [Data Pre-Processing]:Data%20Pre-Processing.md
-[linearRegression-TrainingSet-plot]:../images/linearRegression-TrainingSet-plot.png
-[linearRegression-TestSet-plot]:../images/linearRegression-TestSet-plot.png
+[linearRegression-TrainingSet-plot]:../../images/linearRegression-TrainingSet-plot.png
+[linearRegression-TestSet-plot]:../../images/linearRegression-TestSet-plot.png
 [Code]:../code/linearRegression.py
+[WIP]:../../images/WIP.jpg

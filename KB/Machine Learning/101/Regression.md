@@ -7,10 +7,11 @@ Regression technique vary from Linear Regression to SVR and Random Forests Regre
 In this part, you will understand and learn how to implement the following Machine Learning Regression models:
 
 + [Simple Linear Regression][]
-+ Multiple Linear Regression
++ [Multiple Linear Regression][]
 + Polynomial Regression
 + Support Vector for Regression (SVR)
 + Decision Tree Classification
 + Random Forest Classification
 
 [Simple Linear Regression]:Simple%20Linear%20Regression.md
+[Multiple Linear Regression]:Multi%20Linear%20Regression.md
