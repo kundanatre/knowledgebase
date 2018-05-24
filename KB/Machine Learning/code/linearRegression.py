@@ -9,11 +9,12 @@ result = dataset.iloc[:, 1].values
 from sklearn.model_selection import train_test_split
 features_train, features_test, results_train, results_test = train_test_split(features, result, test_size = 1/3, random_state = 0)
 
-# Fir the Linear Regression to the Training set
+# Fit the Linear Regression to the Training set
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(features_train, results_train)
 
+# Predict the Salaries
 predicted_salaries = regressor.predict(features_test)
 
 print(predicted_salaries)

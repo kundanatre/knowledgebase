@@ -10,9 +10,16 @@ Which indicates that `bias` is a point on `feature` to `result` graph, when `fea
 
 `slope` decides the amount of variation that can be observed **per unit** change of `feature` to corresponding **per unit** change of `result`  
 
-The idea is to have : `Sum(Observed Result - Predicted Result)^2` should be minimum for all `features`
+The idea is to have : `Sum(Observed Result - Predicted Result)^2` Known as **Ordinary Least Squares** should be `minimum` for all `features`
 
 ### Use cases where linear regression can be used  
+It is based on below assumptions
++ Linearity
++ Homoscedasticity
++ Multivariate nOrmality
++ Independence of erros
++ Lack of multicollinearity
+    
     It can be used any where the `feature` set increases or decreases with the `result` set, with some kind of slope.
 
 ## Steps
@@ -53,11 +60,18 @@ Since we are dealing with features that are infact related to each other compara
   ```
     import matplotlib.pyplot as plt
     
+    # Draw the points on the graph
     plt.scatter(features_train, results_train, color='red')
+
+    # Draw the regression line
     plt.plot(features_train, regressor.predict(feature_train), color='blue')
+    
+    # Additional decoration
     plt.title('Salary v/s Experience [Training Set]')
     plt.xlable('Years of Experience')
     plt.ylable('Salary')
+
+    # Show the graph
     plt.show()
   ```  
   > Output  
@@ -71,11 +85,18 @@ Since we are dealing with features that are infact related to each other compara
   ```
     import matplotlib.pyplot as plt
     
+    # Draw the points on the graph
     plt.scatter(features_test, results_test, color='red')
+    
+    # Draw the regression line
     plt.plot(features_train, regressor.predict(feature_train), color='blue')
+    
+    # Additional decoration
     plt.title('Salary v/s Experience [Test Set]')
     plt.xlable('Years of Experience')
     plt.ylable('Salary')
+
+    # Show the graph
     plt.show()
   ```  
   > Output  
