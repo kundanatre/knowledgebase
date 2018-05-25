@@ -24,21 +24,14 @@ All commands are performed with `root` user, unless specified explicitly.
     ```
 
 2. Setup the repository to download Kubernetes binaries
+   
     ```
-    $ echo "[kubernetes]" > /etc/yum.repos.d/kubernetes.repo
-    $ echo "name=kubernetes" >> /etc/yum.repos.d/kubernetes.repo
-    $ echo "baseurl=http://cbs.centos.org/repos/virt7-kubernetes-110-release/x86_64/os/" >> /etc/yum.repos.d/kubernetes.repo
-    $ echo "gpgcheck=0" >> /etc/yum.repos.d/kubernetes.repo
-    ```
-    * OR in one shot *
-    
-    ```
-    sudo bash -c 'cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+    $ cat <<EOF > /etc/yum.repos.d/kubernetes.repo
     [kubernetes]
     name=Kubernetes
     baseurl=http://cbs.centos.org/repos/virt7-kubernetes-110-release/x86_64/os/
     gpgcheck=0
-    EOF'
+    EOF
     
     ```
 
